@@ -1,0 +1,38 @@
+package def;
+
+import java.util.Scanner;
+
+public class DesafioFinal {
+
+    public static void main(String[] args) {
+
+
+        Scanner entrada = new Scanner(System.in);
+
+        int numero1;
+    
+
+        System.out.println("Digite um número:");
+        numero1 = entrada.nextInt();
+        entrada.nextLine();
+
+
+
+       if (numero1 == 0) {
+        System.out.printf("O número é 0");
+        
+        }
+        
+        else if (numero1 % 2 != 0) {
+        System.out.printf("O número %d é ímpar. %n" ,numero1);
+        
+        }
+
+        
+        else {
+        System.out.printf("O número %d é par. %n" ,numero1);
+        
+        }
+
+    }
+}
