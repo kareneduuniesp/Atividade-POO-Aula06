@@ -1,1 +1,52 @@
+import java.util.Scanner;
 
+public class Principal {
+    public static void main(String[] args) {
+
+        Scanner entrada = new Scanner(System.in);
+
+        int opcao;
+        int quantidade;
+        double preco = 0;
+        double total;
+
+        System.out.println("1 - Hambúrguer - R$ 15,00");
+        System.out.println("2 - Pizza - R$ 30,00");
+        System.out.println("3 - Sanduíche - R$ 12,00");
+        System.out.println("4 - Refrigerante - R$ 6,00");
+
+        System.out.print("Escolha um produto: ");
+        opcao = entrada.nextInt();
+
+        System.out.print("Digite a quantidade: ");
+        quantidade = entrada.nextInt();
+
+        switch (opcao) {
+
+            case 1:
+                preco = 15;
+                break;
+
+            case 2:
+                preco = 30;
+                break;
+
+            case 3:
+                preco = 12;
+                break;
+
+            case 4:
+                preco = 6;
+                break;
+
+            default:
+                System.out.println("Opção inválida.");
+        }
+
+        if (opcao >= 1 && opcao <= 4) {
+            total = preco * quantidade;
+
+            System.out.printf("Valor total: R$ %.2f%n", total);
+        }
+    }
+}
