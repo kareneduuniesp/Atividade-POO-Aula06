@@ -1,0 +1,70 @@
+import java.util.Scanner;
+
+public class Principal {
+    public static void main(String[] args) {
+
+        Scanner entrada = new Scanner(System.in);
+
+        String cliente;
+        double valorCompra;
+        double desconto;
+        double valorFinal;
+        int opcao;
+        String pagamento;
+
+        System.out.print("Digite o nome do cliente: ");
+        cliente = entrada.nextLine();
+
+        System.out.print("Digite o valor da compra: ");
+        valorCompra = entrada.nextDouble();
+
+        System.out.println("1 - Dinheiro");
+        System.out.println("2 - Pix");
+        System.out.println("3 - Cartão");
+
+        System.out.print("Escolha a forma de pagamento: ");
+        opcao = entrada.nextInt();
+
+        desconto = 0;
+        pagamento = "";
+
+        switch (opcao) {
+
+            case 1:
+                pagamento = "Dinheiro";
+                desconto = valorCompra * 0.10;
+                break;
+
+            case 2:
+                pagamento = "Pix";
+                desconto = valorCompra * 0.05;
+                break;
+
+            case 3:
+                pagamento = "Cartão";
+                desconto = 0;
+                break;
+
+            default:
+                System.out.println("Forma de pagamento inválida.");
+        }
+
+        if (opcao >= 1 && opcao <= 3) {
+
+            if (valorCompra > 500) {
+                desconto = desconto + (valorCompra * 0.05);
+            }
+
+            valorFinal = valorCompra - desconto;
+
+            System.out.println();
+            System.out.println("----- RESUMO DA COMPRA -----");
+
+            System.out.println("Cliente: " + cliente);
+            System.out.printf("Valor da compra: R$ %.2f%n", valorCompra);
+            System.out.printf("Desconto: R$ %.2f%n", desconto);
+            System.out.printf("Valor final: R$ %.2f%n", valorFinal);
+            System.out.println("Forma de pagamento: " + pagamento);
+        }
+    }
+}
