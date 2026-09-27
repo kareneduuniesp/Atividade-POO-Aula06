@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+public class Principal {
+    public static void main(String[] args) {
+
+        Scanner entrada = new Scanner(System.in);
+
+        String turno;
+
+        System.out.print("Digite o turno (M, V ou N): ");
+        turno = entrada.nextLine();
+
+        if (turno.equals("M") || turno.equals("m")) {
+            System.out.println("Matutino");
+        } else if (turno.equals("V") || turno.equals("v")) {
+            System.out.println("Vespertino");
+        } else if (turno.equals("N") || turno.equals("n")) {
+            System.out.println("Noturno");
+        } else {
+            System.out.println("Turno inválido.");
+        }
+    }
+}
