@@ -1,0 +1,56 @@
+import java.util.Scanner;
+
+public class Principal {
+    public static void main(String[] args) {
+
+        Scanner entrada = new Scanner(System.in);
+
+        double valorCompra;
+        double desconto;
+        double valorFinal;
+        int opcao;
+
+        System.out.print("Digite o valor da compra: ");
+        valorCompra = entrada.nextDouble();
+
+        System.out.println("1 - Dinheiro");
+        System.out.println("2 - Pix");
+        System.out.println("3 - Cartão de crédito");
+        System.out.println("4 - Cartão de débito");
+
+        System.out.print("Escolha a forma de pagamento: ");
+        opcao = entrada.nextInt();
+
+        desconto = 0;
+
+        switch (opcao) {
+
+            case 1:
+                desconto = valorCompra * 0.10;
+                break;
+
+            case 2:
+                desconto = valorCompra * 0.05;
+                break;
+
+            case 3:
+                desconto = 0;
+                break;
+
+            case 4:
+                desconto = valorCompra * 0.02;
+                break;
+
+            default:
+                System.out.println("Opção inválida.");
+        }
+
+        if (opcao >= 1 && opcao <= 4) {
+            valorFinal = valorCompra - desconto;
+
+            System.out.printf("Valor original: R$ %.2f%n", valorCompra);
+            System.out.printf("Desconto: R$ %.2f%n", desconto);
+            System.out.printf("Valor final: R$ %.2f%n", valorFinal);
+        }
+    }
+}
