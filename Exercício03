@@ -1,0 +1,24 @@
+import java.util.Scanner;
+
+public class Principal {
+    public static void main(String[] args) {
+
+        Scanner entrada = new Scanner(System.in);
+
+        double nota;
+
+        System.out.print("Digite a nota: ");
+        nota = entrada.nextDouble();
+
+        if (nota >= 7) {
+            System.out.printf("Nota: %.2f%n", nota);
+            System.out.println("Situação: Aprovado");
+        } else if (nota >= 5) {
+            System.out.printf("Nota: %.2f%n", nota);
+            System.out.println("Situação: Recuperação");
+        } else {
+            System.out.printf("Nota: %.2f%n", nota);
+            System.out.println("Situação: Reprovado");
+        }
+    }
+}
