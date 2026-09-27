@@ -1,0 +1,27 @@
+import java.util.Scanner;
+
+public class Principal {
+    public static void main(String[] args) {
+
+        Scanner entrada = new Scanner(System.in);
+
+        double valorCompra;
+        double desconto;
+        double valorFinal;
+
+        System.out.print("Digite o valor da compra: ");
+        valorCompra = entrada.nextDouble();
+
+        if (valorCompra >= 100) {
+            desconto = valorCompra * 0.10;
+        } else {
+            desconto = 0;
+        }
+
+        valorFinal = valorCompra - desconto;
+
+        System.out.printf("Valor da compra: R$ %.2f%n", valorCompra);
+        System.out.printf("Valor do desconto: R$ %.2f%n", desconto);
+        System.out.printf("Valor final: R$ %.2f%n", valorFinal);
+    }
+}
