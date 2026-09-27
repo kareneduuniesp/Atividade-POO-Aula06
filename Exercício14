@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class Principal {
+    public static void main(String[] args) {
+
+        Scanner entrada = new Scanner(System.in);
+
+        String categoria;
+
+        System.out.print("Digite a categoria: ");
+        categoria = entrada.nextLine();
+
+        if (categoria.equals("Eletrônicos")) {
+            System.out.println("Categoria de produtos eletrônicos.");
+        } else if (categoria.equals("Alimentos")) {
+            System.out.println("Categoria de produtos alimentícios.");
+        } else if (categoria.equals("Roupas")) {
+            System.out.println("Categoria de roupas.");
+        } else if (categoria.equals("Livros")) {
+            System.out.println("Categoria de livros.");
+        } else {
+            System.out.println("Categoria não encontrada.");
+        }
+    }
+}
