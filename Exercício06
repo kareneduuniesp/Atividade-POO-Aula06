@@ -1,0 +1,27 @@
+import java.util.Scanner;
+
+public class Principal {
+    public static void main(String[] args) {
+
+        Scanner entrada = new Scanner(System.in);
+
+        double salario;
+        double aumento;
+        double novoSalario;
+
+        System.out.print("Digite o salário: ");
+        salario = entrada.nextDouble();
+
+        if (salario <= 2000) {
+            aumento = salario * 0.15;
+        } else {
+            aumento = salario * 0.10;
+        }
+
+        novoSalario = salario + aumento;
+
+        System.out.printf("Salário original: R$ %.2f%n", salario);
+        System.out.printf("Valor do aumento: R$ %.2f%n", aumento);
+        System.out.printf("Novo salário: R$ %.2f%n", novoSalario);
+    }
+}
